@@ -41,7 +41,7 @@ const CONTENT: Record<Language, FooterContent> = {
     madeWithSuffix: 'y dedicacion'
   },
   en: {
-    contactTitle: 'Lets talk?',
+    contactTitle: 'Let\'s talk',
     contactSubtitle: 'I am available for new professional opportunities',
     emailLabel: 'Email',
     phoneLabel: 'Phone',
