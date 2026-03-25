@@ -3,28 +3,47 @@
     <nav class="navbar">
       <div class="logo">
         <h2 class="logo-text">Rocío Mori</h2>
-        <span class="logo-subtitle">Cabin Crew Member & Psicopedagoga</span>
+        <span class="logo-subtitle">{{ content.subtitle }}</span>
       </div>
-      
-      <ul class="nav-menu" [class.active]="isMenuOpen">
-        <li class="nav-item">
-          <a href="#sobre-mi" class="nav-link" (click)="scrollToSection('sobre-mi', $event)">Sobre Mí</a>
-        </li>
-        <li class="nav-item">
-          <a href="#experiencia" class="nav-link" (click)="scrollToSection('experiencia', $event)">Experiencia</a>
-        </li>
-        <li class="nav-item">
-          <a href="#formacion" class="nav-link" (click)="scrollToSection('formacion', $event)">Formación</a>
-        </li>
-        <li class="nav-item">
-          <a href="#contacto" class="nav-link" (click)="scrollToSection('contacto', $event)">Contacto</a>
-        </li>
-      </ul>
-      
-      <div class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+
+      <div class="header-actions">
+        <ul class="nav-menu" [class.active]="isMenuOpen">
+          <li class="nav-item">
+            <a href="#sobre-mi" class="nav-link" (click)="scrollToSection('sobre-mi', $event)">{{ content.navigation.about }}</a>
+          </li>
+          <li class="nav-item">
+            <a href="#experiencia" class="nav-link" (click)="scrollToSection('experiencia', $event)">{{ content.navigation.experience }}</a>
+          </li>
+          <li class="nav-item">
+            <a href="#formacion" class="nav-link" (click)="scrollToSection('formacion', $event)">{{ content.navigation.education }}</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contacto" class="nav-link" (click)="scrollToSection('contacto', $event)">{{ content.navigation.contact }}</a>
+          </li>
+        </ul>
+
+        <div class="language-switch" aria-label="Language selector">
+          <button
+            type="button"
+            class="language-btn"
+            [class.active]="currentLanguage === 'es'"
+            (click)="setLanguage('es', $event)">
+            ES
+          </button>
+          <button
+            type="button"
+            class="language-btn"
+            [class.active]="currentLanguage === 'en'"
+            (click)="setLanguage('en', $event)">
+            EN
+          </button>
+        </div>
+
+        <div class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </div>
     </nav>
   </div>

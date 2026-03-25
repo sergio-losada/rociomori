@@ -3,8 +3,8 @@
     <!-- Contact Section -->
     <div class="contact-section" scrollReveal>
       <div class="contact-header text-center">
-        <h2 class="contact-title">¿Hablamos?</h2>
-        <p class="contact-subtitle centered-text">Estoy disponible para nuevas oportunidades profesionales</p>
+        <h2 class="contact-title">{{ content.contactTitle }}</h2>
+        <p class="contact-subtitle centered-text">{{ content.contactSubtitle }}</p>
       </div>
 
       <div class="contact-content">
@@ -16,8 +16,8 @@
               </svg>
             </div>
             <div class="contact-details">
-              <h4 class="contact-label">Email</h4>
-              <a href="mailto:Rociomoribalsamo@gmail.com" class="contact-value">{{'Rociomoribalsamo@gmail.com'}}</a>
+              <h4 class="contact-label">{{ content.emailLabel }}</h4>
+              <a href="mailto:Rociomoribalsamo@gmail.com" class="contact-value">{{ 'Rociomoribalsamo@gmail.com' }}</a>
             </div>
           </div>
 
@@ -28,7 +28,7 @@
               </svg>
             </div>
             <div class="contact-details">
-              <h4 class="contact-label">Teléfono</h4>
+              <h4 class="contact-label">{{ content.phoneLabel }}</h4>
               <a href="tel:+34650774276" class="contact-value">+34 650 77 42 76</a>
             </div>
           </div>
@@ -41,30 +41,28 @@
               </svg>
             </div>
             <div class="contact-details">
-              <h4 class="contact-label">Ubicación</h4>
-              <span class="contact-value">Oviedo, Asturias</span>
+              <h4 class="contact-label">{{ content.locationLabel }}</h4>
+              <span class="contact-value">{{ content.locationValue }}</span>
             </div>
           </div>
         </div>
 
         <div class="contact-cta">
           <div class="cta-card">
-            <h3 class="cta-title">Contáctame</h3>
-            <p class="cta-description">
-              Estoy disponible para discutir nuevas oportunidades en el ámbito de la pedagogía laboral y social.
-            </p>
+            <h3 class="cta-title">{{ content.ctaTitle }}</h3>
+            <p class="cta-description">{{ content.ctaDescription }}</p>
             <div class="cta-actions">
               <a href="mailto:Rociomoribalsamo@gmail.com" class="btn btn-primary">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Enviar Email
+                {{ content.emailButton }}
               </a>
               <a href="https://es.linkedin.com/in/rocioantonellamoribalsamo" target="_blank" rel="noopener" class="btn btn-secondary">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z" fill="currentColor"/>
                 </svg>
-                LinkedIn
+                {{ content.linkedinButton }}
               </a>
             </div>
           </div>
@@ -85,13 +83,13 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <span>Email</span>
+          <span>{{ content.socialEmail }}</span>
         </a>
         <a href="tel:+34650774276" class="social-link">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.59531 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5865 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <span>Teléfono</span>
+          <span>{{ content.socialPhone }}</span>
         </a>
       </div>
     </div>
@@ -100,14 +98,14 @@
     <div class="footer-bottom">
       <div class="footer-content">
         <p class="copyright">
-          © {{ currentYear }} Rocío A. Mori Balsamo. Todos los derechos reservados.
+          © {{ currentYear }} Rocío A. Mori Balsamo. {{ content.rightsReserved }}
         </p>
         <p class="made-with">
-          Hecho con 
+          {{ content.madeWithPrefix }}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="heart">
             <path d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.5783 8.50903 2.9987 7.05 2.9987C5.59096 2.9987 4.19169 3.5783 3.16 4.61C2.1283 5.6417 1.5487 7.04097 1.5487 8.5C1.5487 9.95903 2.1283 11.3583 3.16 12.39L12 21.23L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.5C22.4518 7.77752 22.3095 7.06211 22.0329 6.39467C21.7563 5.72723 21.351 5.1208 20.84 4.61Z" fill="currentColor"/>
           </svg>
-          y dedicación
+          {{ content.madeWithSuffix }}
         </p>
       </div>
     </div>

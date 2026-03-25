@@ -7,16 +7,16 @@
       <div class="profile-image-container" scrollReveal>
         <div class="profile-image-wrapper">
           <div class="image-frame">
-            <img src="assets/rocio.jpg" alt="Rocío A. Mori Balsamo" class="profile-image" />
+            <img src="assets/rocio.jpg" [alt]="content.imageAlt" class="profile-image" />
           </div>
           <div class="image-decoration"></div>
         </div>
       </div>
 
       <div class="profile-info" scrollReveal>
-        <div class="greeting">¡Hola! Soy</div>
+        <div class="greeting">{{ content.greeting }}</div>
         <h1 class="profile-name">Rocío A. Mori Balsamo</h1>
-        <h2 class="profile-title">Cabin Crew Member & Psicopedagoga</h2>
+        <h2 class="profile-title">{{ content.role }}</h2>
 
         <div class="profile-location">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,17 +27,15 @@
               d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-          <span>Oviedo, Asturias</span>
+          <span>{{ content.location }}</span>
         </div>
 
         <p class="profile-description">
-          Profesional de la pedagogía con grandes habilidades comunicativas y ganas de incorporarme al mundo laboral de
-          manera plena, con el fin de ir adquiriendo la experiencia necesaria para lograr mis metas.
+          {{ content.descriptionPrimary }}
         </p>
 
         <p class="profile-description">
-          Poder dedicarme de lleno a la Pedagogía Laboral, estando interesada tanto en el área de formación de personal
-          como en la selección de personal y gestión del talento del mismo.
+          {{ content.descriptionSecondary }}
         </p>
 
         <div class="profile-actions">
@@ -47,7 +45,7 @@
                 d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            Contactar
+            {{ content.contactButton }}
           </a>
           <a href="https://es.linkedin.com/in/rocioantonellamoribalsamo" target="_blank" rel="noopener"
             class="btn btn-secondary">
@@ -64,9 +62,9 @@
 
     <!-- Competencias Section -->
     <div class="competencias-section" scrollReveal>
-      <h3 class="competencias-title">Competencias Clave</h3>
+      <h3 class="competencias-title">{{ content.competenciesTitle }}</h3>
       <div class="competencias-grid">
-        <div class="competencia-card" *ngFor="let competencia of competencias">
+        <div class="competencia-card" *ngFor="let competencia of content.competencies">
           <div class="competencia-icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -81,18 +79,18 @@
 
     <!-- Idiomas Section -->
     <div class="idiomas-section" scrollReveal>
-      <h3 class="idiomas-title">Idiomas</h3>
+      <h3 class="idiomas-title">{{ content.languagesTitle }}</h3>
       <div class="idiomas-grid">
         <div class="idioma-card">
           <div class="idioma-info">
-            <h4 class="idioma-name">Español</h4>
-            <span class="idioma-level">Nativo</span>
+            <h4 class="idioma-name">{{ content.nativeLanguageName }}</h4>
+            <span class="idioma-level">{{ content.nativeLanguageLevel }}</span>
           </div>
         </div>
         <div class="idioma-card">
           <div class="idioma-info">
-            <h4 class="idioma-name">Inglés</h4>
-            <span class="idioma-level">Intermedio (B2)</span>
+            <h4 class="idioma-name">{{ content.englishLanguageName }}</h4>
+            <span class="idioma-level">{{ content.englishLanguageLevel }}</span>
           </div>
           <div class="idioma-certification">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +98,7 @@
                 d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <span>Certificado EBAU</span>
+            <span>{{ content.englishCertification }}</span>
           </div>
         </div>
       </div>
@@ -108,7 +106,7 @@
 
     <!-- Otros Datos Section -->
     <div class="otros-datos-section" scrollReveal>
-      <h3 class="otros-datos-title">Otros Datos</h3>
+      <h3 class="otros-datos-title">{{ content.otherDataTitle }}</h3>
       <div class="otros-datos-grid">
         <div class="dato-card">
           <div class="dato-icon">
@@ -119,8 +117,8 @@
             </svg>
           </div>
           <div class="dato-info">
-            <h4 class="dato-name">Voluntariado</h4>
-            <span class="dato-description">Síndrome de Down Principado de Asturias (2020)</span>
+            <h4 class="dato-name">{{ content.volunteeringLabel }}</h4>
+            <span class="dato-description">{{ content.volunteeringDescription }}</span>
           </div>
         </div>
         <div class="dato-card">
@@ -136,8 +134,8 @@
             </svg>
           </div>
           <div class="dato-info">
-            <h4 class="dato-name">Carnet de Conducir</h4>
-            <span class="dato-description">Permiso B</span>
+            <h4 class="dato-name">{{ content.drivingLicenseLabel }}</h4>
+            <span class="dato-description">{{ content.drivingLicenseDescription }}</span>
           </div>
         </div>
       </div>

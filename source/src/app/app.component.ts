@@ -5,6 +5,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LanguageService } from './services/language.service';
 
 @Component({
   selector: 'app-root',
@@ -21,5 +22,5 @@ import { FooterComponent } from './components/footer/footer.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Rocío A. Mori Balsamo - Cabin Crew Member & Psicopedagoga';
+  constructor(private readonly languageService: LanguageService) {}
 }
